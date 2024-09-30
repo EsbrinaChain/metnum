@@ -1,0 +1,58 @@
+<div class="zona">
+    <div class="col1">
+        <div class="fonsc1">
+            <div class="titulo-blog">
+                Puedes dejar tus comentarios para el autor...
+            </div>
+            <div class="label1"> Autor (email): </div>
+            <input #autorv class="titulo" type="text" name="autorN" 
+            placeholder="Indroduce Email del autor del comentario..." />
+            
+            <!--<div class="label1"> Título: </div>
+            <input #titulov class="titulo" type="text" name="tituloN" placeholder="Indroduce el titulo del comentario..." />-->
+            <div class="label1"> Comentario: </div>
+            <textarea #textov class="contenido" name="contenido" placeholder="Contenido del comentario..."></textarea>
+            <div>
+                <button class="button-18" role="button" (click)="savePost(autorv.value, textov.value);">Registrar comentario</button>
+            </div>
+        </div>
+    </div>
+    <div class="col2">
+        <div class="fonsc2">
+            <div class="titulo-blogList">
+                Listado de comentarios 
+            </div>
+            <div>
+                <table cols="3" border="0px" width="99%" align="center">
+                    <tr>
+                        <td class="header">FECHA</td>
+                        <td class="header">AUTOR</td>
+                        <td></td>
+                    </tr>
+                    @for (item of listaPosts; track item;) {
+                    <tr>
+                        <td class="fonsCell">{{item.fecha}}</td>
+                        <td class="fonsCell">{{item.autor}}</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="header">Comentarios: </td>
+                        <td>
+                            
+                            <textarea matInput type="text" cdkTextareaAutosize [value]="item.texto" readonly class="textarea"
+                                placeholder="Comentario..."></textarea>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                
+                        <td class="sep" colspan="3"></td>
+                    </tr>
+                    }
+                </table>
+            </div>
+            
+        </div>
+    </div>
+</div>

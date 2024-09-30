@@ -1,0 +1,42 @@
+.img1 {
+
+    width: 100%;
+    height: 200px;
+    align-self: center;
+
+}
+
+.img2 {
+    position: relative;
+    top: -90px;
+    left: 45%;
+    height: 12%;
+    width: 7%;
+    border-radius: 50%;
+    z-index: 2;
+    border: 3px solid #ffffff;
+}
+
+.t1 {
+    position: relative;
+    top: -90px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Arial';
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+    z-index: 3;
+    height:30px;
+}
+
+.t2 {
+    position: relative;
+    top: -100px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: crimson;
+    z-index: 3;
+    font-weight: bold;
+    font-size: 42px;
+    height:45px;
+}
